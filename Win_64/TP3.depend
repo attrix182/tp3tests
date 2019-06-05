@@ -88,3 +88,41 @@
 
 1558013346 e:\usuarios\escritorio\tp3\win_64\menu.h
 
+1559756125 source:c:\users\alumno\desktop\tp3tests-master\win_64\employee.c
+	"Employee.h"
+	"stdio.h"
+	<stdlib.h>
+
+1559602096 source:c:\users\alumno\desktop\tp3tests-master\win_64\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"menu.h"
+
+1559753367 c:\users\alumno\desktop\tp3tests-master\win_64\linkedlist.h
+
+1559755448 c:\users\alumno\desktop\tp3tests-master\win_64\controller.h
+
+1559756147 c:\users\alumno\desktop\tp3tests-master\win_64\employee.h
+
+1559602096 c:\users\alumno\desktop\tp3tests-master\win_64\menu.h
+
+1559602096 source:c:\users\alumno\desktop\tp3tests-master\win_64\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1559755819 source:c:\users\alumno\desktop\tp3tests-master\win_64\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1559753716 source:c:\users\alumno\desktop\tp3tests-master\win_64\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+

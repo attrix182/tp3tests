@@ -13,6 +13,16 @@
  */
 int controller_loadFromText(char* path , LinkedList* pArrayListEmployee)
 {
+    FILE *pArchivo;
+
+    if((pArchivo = fopen(path, "r"))==NULL)
+    {
+        printf("No se puedo leer\n");
+        exit(1);
+    }
+
+
+
     return 1;
 }
 
