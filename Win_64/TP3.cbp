@@ -44,10 +44,6 @@
 		</Unit>
 		<Unit filename="Employee.h" />
 		<Unit filename="LinkedList.h" />
-		<Unit filename="funcionesGet.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="funcionesGet.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

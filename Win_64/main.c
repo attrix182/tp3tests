@@ -33,7 +33,6 @@ int main()
         {
         case 1:
             controller_loadFromText("data.csv",listaEmpleados);
-            system("pause");
             break;
         case 2:
             controller_loadFromBinary("data.csv", listaEmpleados);
@@ -47,7 +46,6 @@ int main()
             break;
         case 6:
             controller_ListEmployee(listaEmpleados);
-            system("pause");
             break;
         case 7:
             break;
