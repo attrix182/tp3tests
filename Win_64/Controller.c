@@ -6,6 +6,7 @@
 #include "parser.h"
 
 
+
 /** \brief Carga los datos de los empleados desde el archivo data.csv (modo texto).
  *
  * \param path char*
@@ -29,8 +30,6 @@ int controller_loadFromText(char* path, LinkedList* pArrayListEmployee)
 
         return 1;
     }
-
-
 
 
 }
@@ -61,21 +60,29 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
     char idAux[50],nameAux[50],hoursWorkedAux[50],salaryAux[50];
     int lenList = ll_len(pArrayListEmployee);
     int auxIntID;
+    int i;
 
     if(pArrayListEmployee !=NULL)
     {
         auxIntID = getInt("Ingrese id del nuevo empleado \n");
         itoa(auxIntID, idAux, 10);
 
-        for( int i = 0; i <lenList ; i++ )
+        for( i = 0; i <lenList ; i++ )
         {
             newEmployees = (Employee*)ll_get(pArrayListEmployee, i);
         }
         if( newEmployees->id != auxIntID)
         {
-            getString("Ingrese el nombre del empleado:\n", nameAux);
-            getString("Ingrese  horas del empleado:\n", hoursWorkedAux);
-            getString("Ingrese  salario del empleado:\n", salaryAux);
+            printf("ingrese nombre");
+            scanf("%s", nameAux);
+
+            printf("ingrese horas");
+            scanf("%s", hoursWorkedAux);
+
+            printf("ingrese salario");
+            scanf("%s", salaryAux);
+
+
 
             newEmployees = employee_newParameters(idAux, nameAux, hoursWorkedAux, salaryAux);
             ll_add(pArrayListEmployee, newEmployees);
@@ -126,14 +133,14 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
     int hoursWorkedAux;
     int salaryAux;
     int lenList = ll_len(pArrayListEmployee);
-
+    int i;
     if(pArrayListEmployee!=NULL)
     {
         if(lenList>0)
         {
             printf(" Id------Nombre-----Horas trabajadas---Sueldo \n");
 
-            for(int i = 0; i < lenList; i++)
+            for(i = 0; i < lenList; i++)
             {
                 pEmployeeAux = (Employee*)ll_get(pArrayListEmployee, i);
                 employee_getId(pEmployeeAux, &idAux);

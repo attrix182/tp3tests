@@ -25,8 +25,9 @@ Employee* employee_newParameters(char* idStr,char* nombreStr,char* horasTrabajad
         int horasTrabajadas = atoi(horasTrabajadasStr);
         employee_setHorasTrabajadas(auxiliarEmpleado, horasTrabajadas);
 
-        float sueldo = atof(sueldoStr);
+        int sueldo = atoi(sueldoStr);
         employee_setSueldo(auxiliarEmpleado, sueldo);
+
 
         employee_setNombre(auxiliarEmpleado, nombreStr);
     }
