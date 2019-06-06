@@ -126,23 +126,25 @@
 	"LinkedList.h"
 	"Employee.h"
 
-1559822168 source:d:\luciano sinisterra\tp3tests-master\win_64\controller.c
+1559781966 source:e:\usuarios\escritorio\tp3tests-master\win_64\controller.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Employee.h"
+	"funcionesGet.h"
+	"parser.h"
 
-1559822169 d:\luciano sinisterra\tp3tests-master\win_64\linkedlist.h
+1559756843 e:\usuarios\escritorio\tp3tests-master\win_64\linkedlist.h
 
-1559822168 d:\luciano sinisterra\tp3tests-master\win_64\employee.h
+1559756843 e:\usuarios\escritorio\tp3tests-master\win_64\employee.h
 
-1559822168 source:d:\luciano sinisterra\tp3tests-master\win_64\employee.c
+1559756843 source:e:\usuarios\escritorio\tp3tests-master\win_64\employee.c
 	"Employee.h"
 	"stdio.h"
 	<stdlib.h>
 	<string.h>
 
-1559822169 source:d:\luciano sinisterra\tp3tests-master\win_64\main.c
+1559756843 source:e:\usuarios\escritorio\tp3tests-master\win_64\main.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
@@ -150,18 +152,29 @@
 	"Employee.h"
 	"menu.h"
 
-1559822168 d:\luciano sinisterra\tp3tests-master\win_64\controller.h
+1559756843 e:\usuarios\escritorio\tp3tests-master\win_64\controller.h
 
-1559822170 d:\luciano sinisterra\tp3tests-master\win_64\menu.h
+1559756843 e:\usuarios\escritorio\tp3tests-master\win_64\menu.h
 
-1559822169 source:d:\luciano sinisterra\tp3tests-master\win_64\menu.c
+1559756843 source:e:\usuarios\escritorio\tp3tests-master\win_64\menu.c
 	<stdio.h>
 	<stdlib.h>
 	"menu.h"
 
-1559822170 source:d:\luciano sinisterra\tp3tests-master\win_64\parser.c
+1559782342 source:e:\usuarios\escritorio\tp3tests-master\win_64\parser.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Employee.h"
+
+1559776413 e:\usuarios\escritorio\tp3tests-master\win_64\funcionesget.h
+
+1559776413 source:e:\usuarios\escritorio\tp3tests-master\win_64\funcionesget.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"funcionesGet.h"
+
+1559756843 e:\usuarios\escritorio\tp3tests-master\win_64\parser.h
 

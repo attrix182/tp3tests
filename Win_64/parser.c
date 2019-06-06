@@ -24,8 +24,7 @@ int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
             if(r==4)
             {
                 auxEmployee = employee_newParameters(idAux ,nameAux, hoursWorkedAux, salaryAux);
-
-                //ll_add(pArrayListEmployee, auxEmployee );
+                ll_add(pArrayListEmployee, auxEmployee );
                 i++;
             }
      }
