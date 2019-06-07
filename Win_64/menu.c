@@ -16,7 +16,7 @@ int getOptionModify()
 {
     int optionModify;
     printf("%s","             MODIFICACION            \n");
-    printf("%10s - %10s - %10s - %10s \n", "1.NAME", "2.LAST NAME","3.SALARY","4.SECTOR");
+    printf("%%10s - %10s - %10s \n", "1.Nombre", "2.Horas trabajadas","3.Salario","4.Salir");
     scanf("%d", &optionModify);
 
     return optionModify;

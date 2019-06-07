@@ -37,8 +37,9 @@ float getFloat(char mensaje[])
 void getString(char mensaje[], char input[])
 {
     printf(mensaje);
-    scanf("%s", mensaje);
-    gets(input);
+    scanf("%s", input);
+
+  //  gets(input);
 }
 
 

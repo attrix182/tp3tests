@@ -43,6 +43,8 @@ int main()
             controller_addEmployee(listaEmpleados);
             break;
         case 4:
+            controller_editEmployee(listaEmpleados);
+            system("pause");
             break;
         case 5:
             break;
