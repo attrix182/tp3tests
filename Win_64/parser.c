@@ -36,15 +36,30 @@ int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
 
 
 
-        /** \brief Parsea los datos los datos de los empleados desde el archivo data.csv (modo binario).
-         *
-         * \param path char*
-         * \param pArrayListEmployee LinkedList*
-         * \return int
-         *
-         */
-        int parser_EmployeeFromBinary(FILE* pFile , LinkedList* pArrayListEmployee)
-        {
+/** \brief Parsea los datos los datos de los empleados desde el archivo data.csv (modo binario).
+*
+* \param path char*
+* \param pArrayListEmployee LinkedList*
+* \return int
+*
+*/
+int parser_EmployeeFromBinary(FILE* pFile , LinkedList* pArrayListEmployee)
+{
+    Employee employeeAux;
+    int i = 0;
 
-            return 1;
-        }
+    fread(&employeeAux, sizeof(Employee), 1, pFile);
+
+    while(!feof(pFile))
+    {
+        Employee *employeeNew = employee_new();
+        employee_setId(employeeNew,employeeAux.id);
+        employee_setHorasTrabajadas(employeeNew,employeeAux.horasTrabajadas);
+        employee_setNombre(employeeNew,employeeAux.nombre);
+        employee_setSueldo(employeeNew,employeeAux.sueldo);
+        i ++;
+        ll_add(pArrayListEmployee, employeeNew);
+        fread(&employeeAux, sizeof(Employee), 1, pFile);
+    }
+    return 1;
+}

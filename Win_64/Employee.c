@@ -36,6 +36,13 @@ Employee* employee_newParameters(char* idStr,char* nombreStr,char* horasTrabajad
 
     return 0;
 }
+
+void employee_delete(Employee* this)
+{
+    if(this!=NULL)
+        free(this);
+}
+
 int employee_setId(Employee* this,int id)
 {
     int retorno = 0;
@@ -192,3 +199,119 @@ int employee_getSueldo(Employee* this,int* sueldo)
 }
 
 
+/** \brief
+ *
+ * \param employeeA void*
+ * \param employeeB void*
+ * \return int
+ *
+ */
+int employee_sortById(void* employeeA,void* employeeB)
+{
+    Employee * empA;
+    Employee * empB;
+    int ret;
+
+    if((employeeA != NULL)&&(employeeB !=NULL))
+    {
+        empA = (Employee*)employeeA;
+        empB = (Employee*)employeeB;
+
+        if(empA->id > empB->id)
+        {
+            ret = -1;
+        }
+        else if(empA->id == empB->id)
+        {
+            ret = 1;
+        }
+        else
+        {
+            ret = 0;
+        }
+    }
+    return ret;
+
+}
+
+/** \brief
+ *
+ * \param empleadoA void*
+ * \param empleadoB void*
+ * \return int
+ *
+ */
+int employee_SortByName(void* employeeA,void* employeeB)
+{
+    Employee * empA;
+    Employee * empB;
+    int ret;
+
+    if((employeeA != NULL)&&(employeeB !=NULL))
+    {
+        empA = (Employee*)employeeA;
+        empB = (Employee*)employeeB;
+        ret = strcmp(empB->nombre, empA->nombre);
+
+}
+    return ret;
+
+}
+
+int employee_SortByhoursWorked(void* employeeA,void* employeeB)
+{
+
+    Employee * empA;
+    Employee * empB;
+    int ret;
+
+    if((employeeA != NULL)&&(employeeB !=NULL))
+    {
+        empA = (Employee*)employeeA;
+        empB = (Employee*)employeeB;
+
+        if(empA->horasTrabajadas > empB->horasTrabajadas)
+        {
+            ret = -1;
+        }
+        else if(empA->horasTrabajadas == empB->horasTrabajadas)
+        {
+            ret = 1;
+        }
+        else
+        {
+            ret = 0;
+        }
+    }
+    return ret;
+
+}
+
+int employee_SortBySalary(void* employeeA,void* employeeB)
+{
+
+    Employee * empA;
+    Employee * empB;
+    int ret;
+
+    if((employeeA != NULL)&&(employeeB !=NULL))
+    {
+        empA = (Employee*)employeeA;
+        empB = (Employee*)employeeB;
+
+        if(empA->sueldo > empB->sueldo)
+        {
+            ret = -1;
+        }
+        else if(empA->sueldo == empB->sueldo)
+        {
+            ret = 1;
+        }
+        else
+        {
+            ret = 0;
+        }
+    }
+    return ret;
+
+}

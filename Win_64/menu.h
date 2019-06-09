@@ -16,5 +16,5 @@ int pedirOpcionMenu();
  */
 int getOptionModify();
 
-int getOptionShow();
+int getOptionSort();
 #endif // MENU_H_INCLUDED
