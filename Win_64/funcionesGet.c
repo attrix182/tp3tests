@@ -4,8 +4,6 @@
 #include <conio.h>
 #include "funcionesGet.h"
 
-
-// ---------------- GETS ----------------
 int getInt(char mensaje[])
 {
     char auxiliarChar[10];
@@ -55,5 +53,6 @@ void getString(char mensaje[], char input[])
 
   //  gets(input);
 }
+
 
 

@@ -43,6 +43,8 @@ void employee_delete(Employee* this)
         free(this);
 }
 
+//Setters y Getters
+
 int employee_setId(Employee* this,int id)
 {
     int retorno = 0;
@@ -57,15 +59,6 @@ int employee_setId(Employee* this,int id)
     return retorno;
 }
 
-
-/** \brief Valida el Nombre
- *
- * \param Employee* this Puntero del array de empleados
- * \param char* nombre recibe un nombre
- * \return retorno, si esta bien es 1, si esta mal es 0
- *
- */
-
 int employee_setNombre(Employee* this,char* nombre) ///MODIFICAR
 {
     int retorno = 0;
@@ -77,14 +70,6 @@ int employee_setNombre(Employee* this,char* nombre) ///MODIFICAR
     return retorno;
 }
 
-
-/** \brief Valida las horas de trabajo
- *
- * \param Employee* this Puntero del array de empleados
- * \param int horasTrabajadas Recibe una cantidad de horas de trabajo
- * \return retorno, si esta bien es 1, si esta mal es 0
- *
- */
 
 int employee_setHorasTrabajadas(Employee* this,int horasTrabajadas)
 {
@@ -101,13 +86,7 @@ int employee_setHorasTrabajadas(Employee* this,int horasTrabajadas)
 }
 
 
-/** \brief Valida el sueldo
- *
- * \param Employee* this Puntero del array de empleados
- * \param float sueldo Recibe una cantidad de sueldo
- * \return retorno, si esta bien es 1, si esta mal es 0
- *
- */
+
 int employee_setSueldo(Employee* this, int sueldo)
 {
     int retorno = 0;
@@ -123,13 +102,7 @@ int employee_setSueldo(Employee* this, int sueldo)
 }
 
 
-/** \brief Me escribe el parametro del nombre en el argumento pasado
- *
- * \param Employee* this Puntero del array de empleados
- * \param char* nombre Recibe un nombre
- * \return retorno, si esta bien es 1, si esta mal es 0
- *
- */
+
 int employee_getNombre(Employee* this,char* nombre)
 {
     int retorno = 0;
@@ -142,13 +115,7 @@ int employee_getNombre(Employee* this,char* nombre)
 }
 
 
-/** \brief Me escribe el parametro del id en el argumento pasado
- *
- * \param Employee* this Puntero del array de empleados
- * \param int* id recibe un puntero al id
- * \return retorno, si esta bien es 1, si esta mal es 0
- *
- */
+
 
 int employee_getId(Employee* this,int* id)
 {
@@ -161,13 +128,7 @@ int employee_getId(Employee* this,int* id)
     return retorno;
 }
 
-/** \brief Me escribe el parametro de las horas trabajadas en el argumento pasado
- *
- * \param Employee* this Puntero del array de empleados
- * \param int* horasTrabajadas Recibe un puntero a las horas trabajadas
- * \return retorno, si esta bien es 1, si esta mal es 0
- *
- */
+
 int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas)
 {
     int retorno = 0;
@@ -180,13 +141,7 @@ int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas)
 }
 
 
-/** \brief Me escribe el parametro del sueldo en el argumento pasado
- *
- * \param Employee* this Puntero del array de empleados
- * \param float* sueldo recibe un puntero del sueldo
- * \return retorno, si esta bien es 1, si esta mal es 0
- *
- */
+
 int employee_getSueldo(Employee* this,int* sueldo)
 {
     int retorno = 0;
@@ -199,13 +154,6 @@ int employee_getSueldo(Employee* this,int* sueldo)
 }
 
 
-/** \brief
- *
- * \param employeeA void*
- * \param employeeB void*
- * \return int
- *
- */
 int employee_sortById(void* employeeA,void* employeeB)
 {
     Employee * empA;
@@ -234,13 +182,6 @@ int employee_sortById(void* employeeA,void* employeeB)
 
 }
 
-/** \brief
- *
- * \param empleadoA void*
- * \param empleadoB void*
- * \return int
- *
- */
 int employee_SortByName(void* employeeA,void* employeeB)
 {
     Employee * empA;

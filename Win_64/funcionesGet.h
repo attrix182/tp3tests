@@ -1,5 +1,3 @@
-// --------------------------- GETS ----------------------------
-
 /** \brief Solicita un numero al usuario y devuelve el resultado
  *
  * \param mensaje Es el mensaje que será mostrado al usuario
@@ -31,5 +29,7 @@ char getChar(char mensaje[]);
  * \return void.
  */
 void getString(char mensaje[], char input[]);
+
+
 
 

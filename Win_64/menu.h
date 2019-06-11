@@ -2,23 +2,23 @@
 #define MENU_H_INCLUDED
 
 
-/** \brief
+/** \brief Muestra un menu principal y recibe una opcion ingresada por el usuario
  *
- * \return int
+ * \return int opcion ingresada
  *
  */
 int pedirOpcionMenu();
 
-/** \brief
+/** \brief Muetra un menu para ediciones
  *
- * \return int
+ * \return int opcion ingresada
  *
  */
 int getOptionModify();
 
-/** \brief
+/** \brief Muetra un menu para ordenamientos
  *
- * \return int
+ * \return int opcion ingresada
  *
  */
 int getOptionSort();
