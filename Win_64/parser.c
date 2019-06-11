@@ -28,7 +28,7 @@ int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
                 i++;
             }
      }
-        printf("Se cargaron %d empleados a la lista con exito !\n", i);
+        printf("Se cargaron %d empleados a la lista (modo texto)\n", i);
 
         return i;
 
@@ -61,5 +61,6 @@ int parser_EmployeeFromBinary(FILE* pFile , LinkedList* pArrayListEmployee)
         ll_add(pArrayListEmployee, employeeNew);
         fread(&employeeAux, sizeof(Employee), 1, pFile);
     }
+            printf("Se cargaron %d empleados a la lista (modo binario) \n", i);
     return 1;
 }

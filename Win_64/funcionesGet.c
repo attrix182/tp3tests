@@ -6,12 +6,26 @@
 
 
 // ---------------- GETS ----------------
-int getInt (char mensaje[])
+int getInt(char mensaje[])
 {
-    int auxiliarInt;
+    char auxiliarChar[10];
+    int enteroADevolver;
+
     printf("%s", mensaje);
-    scanf("%d", &auxiliarInt);
-    return auxiliarInt;
+    scanf("%s", auxiliarChar);
+    fflush(stdin);
+    enteroADevolver = atoi(auxiliarChar);
+
+    while(enteroADevolver == 0)
+    {
+        printf("%s", "Valor invalido. Ingrese un numero \n");
+        scanf("%s", auxiliarChar);
+        fflush(stdin);
+        enteroADevolver = atoi(auxiliarChar);
+    }
+
+    return enteroADevolver;
+
 }
 
 

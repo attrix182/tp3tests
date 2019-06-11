@@ -129,7 +129,7 @@
 	"funcionesGet.h"
 	"parser.h"
 
-1559937734 source:e:\usuarios\escritorio\tp3tests-master\win_64\controller.c
+1560281701 source:e:\usuarios\escritorio\tp3tests-master\win_64\controller.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
@@ -148,7 +148,7 @@
 	<stdlib.h>
 	<string.h>
 
-1559937315 source:e:\usuarios\escritorio\tp3tests-master\win_64\main.c
+1559940917 source:e:\usuarios\escritorio\tp3tests-master\win_64\main.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
@@ -158,22 +158,23 @@
 
 1559834485 e:\usuarios\escritorio\tp3tests-master\win_64\controller.h
 
-1559933416 e:\usuarios\escritorio\tp3tests-master\win_64\menu.h
+1560280967 e:\usuarios\escritorio\tp3tests-master\win_64\menu.h
 
-1559935450 source:e:\usuarios\escritorio\tp3tests-master\win_64\menu.c
+1560281087 source:e:\usuarios\escritorio\tp3tests-master\win_64\menu.c
 	<stdio.h>
 	<stdlib.h>
 	"menu.h"
+	"funcionesGet.h"
 
-1559937156 source:e:\usuarios\escritorio\tp3tests-master\win_64\parser.c
+1560280072 source:e:\usuarios\escritorio\tp3tests-master\win_64\parser.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Employee.h"
 
-1559834485 e:\usuarios\escritorio\tp3tests-master\win_64\funcionesget.h
+1560280436 e:\usuarios\escritorio\tp3tests-master\win_64\funcionesget.h
 
-1559870105 source:e:\usuarios\escritorio\tp3tests-master\win_64\funcionesget.c
+1560280700 source:e:\usuarios\escritorio\tp3tests-master\win_64\funcionesget.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

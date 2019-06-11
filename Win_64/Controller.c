@@ -90,13 +90,20 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
         for( i = 0; i <lenList ; i++ )
         {
             newEmployees = (Employee*)ll_get(pArrayListEmployee, i);
+            if( newEmployees->id == auxIntID)
+            {
+                printf("El id que desea agregar ya existe!\n");
+                break;
+
+            }
         }
+
         if( newEmployees->id != auxIntID)
         {
 
-            getString("ingrese nombre", nameAux);
-            getString("ingrese horas", hoursWorkedAux);
-            getString("ingrese salario", salaryAux);
+            getString("ingrese nombre \n", nameAux);
+            getString("ingrese horas trabajadas \n", hoursWorkedAux);
+            getString("ingrese salario \n", salaryAux);
 
             newEmployees = employee_newParameters(idAux, nameAux, hoursWorkedAux, salaryAux);
             ll_add(pArrayListEmployee, newEmployees);
@@ -132,6 +139,7 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
         system("cls");
         for( i = 0; i <listLen ; i++ )
         {
+
             auxEmployee = (Employee*)ll_get(pArrayListEmployee, i);
             if( idAuxInt == auxEmployee->id )
             {
@@ -142,15 +150,15 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
                     switch(option)
                     {
                     case 1:
-                        getString("Ingrese nuevo nombre", nameAux);
+                        getString("Ingrese nuevo nombre \n", nameAux);
                         employee_setNombre(auxEmployee, nameAux);
                         break;
                     case 2:
-                        hoursWorkedAuxInt = getInt("ingrese horas");
+                        hoursWorkedAuxInt = getInt("ingrese horas trabajadas\n");
                         employee_setHorasTrabajadas(auxEmployee, hoursWorkedAuxInt);
                         break;
                     case 3:
-                        salaryAuxInt = getInt("ingrese salario");
+                        salaryAuxInt = getInt("ingrese salario \n");
                         employee_setSueldo(auxEmployee, salaryAuxInt);
                         break;
                     case 4:
@@ -165,6 +173,7 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
 
             }
         }
+
     }
     return 1;
 }
@@ -198,9 +207,13 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
                 printf("Empleado borrado con exito!\n");
                 employee_delete(auxEmployee);
                 break;
-
             }
         }
+        if( auxEmployee->id != idAux)
+        {
+            printf("Ese Id no existe.\n");
+        }
+
     }
 
     return 1;
@@ -354,10 +367,10 @@ int controller_saveAsBinary(char* path, LinkedList* pArrayListEmployee)
     {
         for(i = 0; i < listLen; i++)
         {
-        pEmployeeAux = (Employee*)ll_get(pArrayListEmployee, i);
-        fwrite(pEmployeeAux,sizeof(Employee), 1, pArchivo);
+            pEmployeeAux = (Employee*)ll_get(pArrayListEmployee, i);
+            fwrite(pEmployeeAux,sizeof(Employee), 1, pArchivo);
         }
-          printf("Archivo .bin guardado\n");
+        printf("Archivo .bin guardado\n");
     }
     fclose(pArchivo);
     return 1;
