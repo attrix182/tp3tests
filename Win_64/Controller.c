@@ -57,6 +57,8 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
     Employee* newEmployees = employee_new();
     int ret = 0;
     char idAux[50],nameAux[50],hoursWorkedAux[50],salaryAux[50];
+    int hoursWorkedAuxINT;
+    int salaryAuxINT;
     int lenList = ll_len(pArrayListEmployee);
     int auxIntID;
     int i;
@@ -71,7 +73,7 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
             newEmployees = (Employee*)ll_get(pArrayListEmployee, i);
             if( newEmployees->id == auxIntID)
             {
-                printf("El id que desea agregar ya existe!\n");
+                printf("Ese ID ya esta en uso!\n");
                 break;
 
             }
@@ -81,8 +83,11 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
         {
 
             getString("ingrese nombre \n", nameAux);
-            getString("ingrese horas trabajadas \n", hoursWorkedAux);
-            getString("ingrese salario \n", salaryAux);
+            hoursWorkedAuxINT = getInt("ingrese horas trabajadas \n");
+            salaryAuxINT = getInt("ingrese salario \n");
+
+            itoa(hoursWorkedAuxINT, hoursWorkedAux, 10);
+            itoa(salaryAuxINT, salaryAux, 10);
 
             newEmployees = employee_newParameters(idAux, nameAux, hoursWorkedAux, salaryAux);
             ll_add(pArrayListEmployee, newEmployees);
@@ -108,7 +113,7 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
 
     if(pArrayListEmployee != NULL)
     {
-        idAuxInt = getInt("Ingrese el id que desea modificar:  ");
+        idAuxInt = getInt("Ingrese el ID que desea modificar:  ");
         system("cls");
         for( i = 0; i <listLen ; i++ )
         {
@@ -237,16 +242,16 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
     switch(option)
     {
     case 1:
-        ll_sort(pArrayListEmployee, employee_sortById, 0);
+        ll_sort(pArrayListEmployee, employee_sortById, 1);
         break;
     case 2:
-        ll_sort(pArrayListEmployee, employee_SortByName, 0);
+        ll_sort(pArrayListEmployee, employee_SortByName, 1);
         break;
     case 3:
-        ll_sort(pArrayListEmployee, employee_SortByhoursWorked, 0);
+        ll_sort(pArrayListEmployee, employee_SortByhoursWorked, 1);
         break;
     case 4:
-        ll_sort(pArrayListEmployee, employee_SortBySalary, 0);
+        ll_sort(pArrayListEmployee, employee_SortBySalary, 1);
         break;
     }
 

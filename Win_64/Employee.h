@@ -95,7 +95,7 @@ int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas);
 /** \brief Valida el sueldo
  *
  * \param Employee* this Puntero del array de empleados
- * \param float sueldo Recibe una cantidad de sueldo
+ * \param int sueldo Recibe una cantidad de sueldo
  * \return retorno, si esta bien es 1, si esta mal es 0
  *
  */
