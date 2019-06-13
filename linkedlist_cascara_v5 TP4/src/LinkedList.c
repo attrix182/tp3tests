@@ -34,7 +34,10 @@ LinkedList* ll_newLinkedList(void)
 int ll_len(LinkedList* this)
 {
     int returnAux = -1;
-
+    if(this != NULL)
+    {
+        returnAux = this->size;
+    }
     return returnAux;
 }
 
@@ -50,8 +53,20 @@ int ll_len(LinkedList* this)
 static Node* getNode(LinkedList* this, int nodeIndex)
 {
     Node* pNode = NULL;
+    int len = ll_len(this);
 
-    return pNode;
+    if(this != NULL)
+    {
+        if(nodeIndex < 0 && nodeIndex > len)
+        {
+
+
+
+            return pNode;
+        }
+    }
+
+    return NULL;
 }
 
 /** \brief  Permite realizar el test de la funcion getNode la cual es privada
@@ -80,6 +95,7 @@ Node* test_getNode(LinkedList* this, int nodeIndex)
 static int addNode(LinkedList* this, int nodeIndex,void* pElement)
 {
     int returnAux = -1;
+
 
     return returnAux;
 }
@@ -326,7 +342,7 @@ LinkedList* ll_clone(LinkedList* this)
  * \return int Retorna  (-1) Error: si el puntero a la listas es NULL
                                 ( 0) Si ok
  */
-int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order)
+int ll_sort(LinkedList* this, int (*pFunc)(void*,void*), int order)
 {
     int returnAux =-1;
 
