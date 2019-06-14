@@ -32,3 +32,37 @@ int getOptionSort()
 
     return optionSort;
 }
+
+int getDireccion()
+{
+
+    int optionDireccion;
+    printf("%s","           SENTIDO                 \n");
+    printf("%s %s %s\n", "1.Ascendente", "2.Descendente","3.Salir" );
+
+    do
+    {
+
+        optionDireccion = getInt("");
+
+        switch(optionDireccion)
+        {
+        case 1:
+            optionDireccion = 1;
+            break;
+        case 2:
+            optionDireccion = 0;
+            break;
+        case 3:
+            optionDireccion = 3;
+        default:
+            printf("Opcion invalida\n");
+            break;
+        }
+        return optionDireccion;
+    }
+    while(optionDireccion != 3);
+
+
+}
+

@@ -1,135 +1,5 @@
 # depslib dependency file v1.0
-1533062952 source:/home/mauro/Descargas/Practica_Pair_v1.2/Linux_64/Employee.c
-
-1533063050 source:/home/mauro/Descargas/Practica_Pair_v1.2/Linux_64/main.c
-	<stdio.h>
-	<stdlib.h>
-	"LinkedList.h"
-	"Employee.h"
-
-1532354323 /home/mauro/Descargas/Practica_Pair_v1.2/Linux_64/LinkedList.h
-
-1533062926 /home/mauro/Descargas/Practica_Pair_v1.2/Linux_64/Employee.h
-
-1533063080 source:/home/mauro/Descargas/Practica_Pair_v1.2/Linux_64/parser.c
-	<stdio.h>
-	<stdlib.h>
-	"LinkedList.h"
-	"Employee.h"
-
-1533062952 source:/home/mauro/Descargas/TP3/Linux_64/Employee.c
-
-1533066103 source:/home/mauro/Descargas/TP3/Linux_64/main.c
-	<stdio.h>
-	<stdlib.h>
-	"LinkedList.h"
-	"Employee.h"
-
-1532354323 /home/mauro/Descargas/TP3/Linux_64/LinkedList.h
-
-1533066103 /home/mauro/Descargas/TP3/Linux_64/Employee.h
-
-1533063080 source:/home/mauro/Descargas/TP3/Linux_64/parser.c
-	<stdio.h>
-	<stdlib.h>
-	"LinkedList.h"
-	"Employee.h"
-
-1533145792 source:/home/mauro/Descargas/TP3-20180801T173619Z-001/TP3/Linux_64/Controller.c
-	<stdio.h>
-	<stdlib.h>
-	"LinkedList.h"
-	"Employee.h"
-
-1533118898 /home/mauro/Descargas/TP3-20180801T173619Z-001/TP3/Linux_64/LinkedList.h
-
-1533118898 /home/mauro/Descargas/TP3-20180801T173619Z-001/TP3/Linux_64/Employee.h
-
-1533118898 source:/home/mauro/Descargas/TP3-20180801T173619Z-001/TP3/Linux_64/Employee.c
-
-1533145890 source:/home/mauro/Descargas/TP3-20180801T173619Z-001/TP3/Linux_64/parser.c
-	<stdio.h>
-	<stdlib.h>
-	"LinkedList.h"
-	"Employee.h"
-
-1559616218 source:e:\usuarios\escritorio\tp3\win_64\controller.c
-	<stdio.h>
-	<stdlib.h>
-	"LinkedList.h"
-	"Employee.h"
-
-1533133022 e:\usuarios\escritorio\tp3\win_64\linkedlist.h
-
-1533133022 e:\usuarios\escritorio\tp3\win_64\employee.h
-
-1533133022 source:e:\usuarios\escritorio\tp3\win_64\employee.c
-
-1559615268 source:e:\usuarios\escritorio\tp3\win_64\main.c
-	<stdio.h>
-	<stdlib.h>
-	"LinkedList.h"
-	"Controller.h"
-	"Employee.h"
-	"menu.h"
-
-1533133022 e:\usuarios\escritorio\tp3\win_64\controller.h
-
-1533133022 source:e:\usuarios\escritorio\tp3\win_64\parser.c
-	<stdio.h>
-	<stdlib.h>
-	"LinkedList.h"
-	"Employee.h"
-
-1559615299 source:e:\usuarios\escritorio\tp3\win_64\menu.c
-	<stdio.h>
-	<stdlib.h>
-	"menu.h"
-
-1558013346 e:\usuarios\escritorio\tp3\win_64\menu.h
-
-1559831650 source:c:\users\alumno\desktop\tp3tests-master\win_64\employee.c
-	"Employee.h"
-	"stdio.h"
-	<stdlib.h>
-	<string.h>
-
-1559831647 source:c:\users\alumno\desktop\tp3tests-master\win_64\main.c
-	<stdio.h>
-	<stdlib.h>
-	"LinkedList.h"
-	"Controller.h"
-	"Employee.h"
-	"menu.h"
-
-1559837766 c:\users\alumno\desktop\tp3tests-master\win_64\linkedlist.h
-
-1559837765 c:\users\alumno\desktop\tp3tests-master\win_64\controller.h
-
-1559837765 c:\users\alumno\desktop\tp3tests-master\win_64\employee.h
-
-1559837766 c:\users\alumno\desktop\tp3tests-master\win_64\menu.h
-
-1559837766 source:c:\users\alumno\desktop\tp3tests-master\win_64\menu.c
-	<stdio.h>
-	<stdlib.h>
-	"menu.h"
-
-1559837766 source:c:\users\alumno\desktop\tp3tests-master\win_64\parser.c
-	<stdio.h>
-	<stdlib.h>
-	"LinkedList.h"
-	"Employee.h"
-
-1559832479 source:c:\users\alumno\desktop\tp3tests-master\win_64\controller.c
-	<stdio.h>
-	<stdlib.h>
-	"LinkedList.h"
-	"Employee.h"
-	"funcionesGet.h"
-	"parser.h"
-
-1560462082 source:e:\usuarios\escritorio\tp3tests-master\win_64\controller.c
+1560526313 source:c:\users\alumno\desktop\tp3tests-master\win_64\controller.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
@@ -138,17 +8,30 @@
 	"parser.h"
 	"menu.h"
 
-1559834485 e:\usuarios\escritorio\tp3tests-master\win_64\linkedlist.h
+1560523796 c:\users\alumno\desktop\tp3tests-master\win_64\linkedlist.h
 
-1560461144 e:\usuarios\escritorio\tp3tests-master\win_64\employee.h
+1560523796 c:\users\alumno\desktop\tp3tests-master\win_64\employee.h
 
-1560461921 source:e:\usuarios\escritorio\tp3tests-master\win_64\employee.c
+1560523797 c:\users\alumno\desktop\tp3tests-master\win_64\funcionesget.h
+
+1560523797 c:\users\alumno\desktop\tp3tests-master\win_64\parser.h
+
+1560524963 c:\users\alumno\desktop\tp3tests-master\win_64\menu.h
+
+1560523796 source:c:\users\alumno\desktop\tp3tests-master\win_64\employee.c
 	"Employee.h"
 	"stdio.h"
 	<stdlib.h>
 	<string.h>
 
-1559940917 source:e:\usuarios\escritorio\tp3tests-master\win_64\main.c
+1560523796 source:c:\users\alumno\desktop\tp3tests-master\win_64\funcionesget.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"funcionesGet.h"
+
+1560523797 source:c:\users\alumno\desktop\tp3tests-master\win_64\main.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
@@ -156,43 +39,17 @@
 	"Employee.h"
 	"menu.h"
 
-1560283971 e:\usuarios\escritorio\tp3tests-master\win_64\controller.h
+1560523796 c:\users\alumno\desktop\tp3tests-master\win_64\controller.h
 
-1560285273 e:\usuarios\escritorio\tp3tests-master\win_64\menu.h
-
-1560281087 source:e:\usuarios\escritorio\tp3tests-master\win_64\menu.c
+1560526235 source:c:\users\alumno\desktop\tp3tests-master\win_64\menu.c
 	<stdio.h>
 	<stdlib.h>
 	"menu.h"
 	"funcionesGet.h"
 
-1560283660 source:e:\usuarios\escritorio\tp3tests-master\win_64\parser.c
+1560523797 source:c:\users\alumno\desktop\tp3tests-master\win_64\parser.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Employee.h"
-
-1560283660 e:\usuarios\escritorio\tp3tests-master\win_64\funcionesget.h
-
-1560283660 source:e:\usuarios\escritorio\tp3tests-master\win_64\funcionesget.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	<conio.h>
-	"funcionesGet.h"
-
-1560283660 e:\usuarios\escritorio\tp3tests-master\win_64\parser.h
-
-1559838493 source:c:\users\alumno\desktop\tp3tests-master\win_64\funcionesget.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	<conio.h>
-	"funcionesGet.h"
-
-1559837766 c:\users\alumno\desktop\tp3tests-master\win_64\funcionesget.h
-
-1559837766 c:\users\alumno\desktop\tp3tests-master\win_64\parser.h
-
-1559831348 c:\users\alumno\desktop\tp3tests-master\win_64\gets.h
 

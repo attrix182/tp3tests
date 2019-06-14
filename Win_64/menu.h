@@ -22,4 +22,7 @@ int getOptionModify();
  *
  */
 int getOptionSort();
+
+
+int getDireccion();
 #endif // MENU_H_INCLUDED

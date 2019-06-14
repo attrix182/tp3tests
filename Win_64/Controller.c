@@ -233,7 +233,7 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
 int controller_sortEmployee(LinkedList* pArrayListEmployee)
 {
     int option;
-
+    int sentido;
     if(pArrayListEmployee != NULL)
     {
         option = getOptionSort();
@@ -242,19 +242,23 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
     switch(option)
     {
     case 1:
-        ll_sort(pArrayListEmployee, employee_sortById, 1);
+
+        sentido = getDireccion();
+        ll_sort(pArrayListEmployee, employee_sortById, sentido);
         break;
     case 2:
-        ll_sort(pArrayListEmployee, employee_SortByName, 1);
+        sentido = getDireccion();
+        ll_sort(pArrayListEmployee, employee_SortByName, sentido);
         break;
     case 3:
-        ll_sort(pArrayListEmployee, employee_SortByhoursWorked, 1);
+        sentido = getDireccion();
+        ll_sort(pArrayListEmployee, employee_SortByhoursWorked, sentido);
         break;
     case 4:
-        ll_sort(pArrayListEmployee, employee_SortBySalary, 1);
+        sentido = getDireccion();
+        ll_sort(pArrayListEmployee, employee_SortBySalary, sentido);
         break;
     }
-
 
 
     return 1;
