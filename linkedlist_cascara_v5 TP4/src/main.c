@@ -31,10 +31,12 @@ int main(void)
 
         //startTesting(2);  // ll_len
 
-        startTesting(3);  // getNode - test_getNode
-/*
-        startTesting(4);  // addNode - test_addNode
+        //startTesting(3);  // getNode - test_getNode
+
+        //startTesting(4);  // addNode - test_addNode
+
         startTesting(5);  // ll_add
+/*
         startTesting(6);  // ll_get
         startTesting(7);  // ll_set
         startTesting(8);  // ll_remove
