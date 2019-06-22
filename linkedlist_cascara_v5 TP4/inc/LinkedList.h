@@ -32,6 +32,24 @@ struct LinkedList
 #endif
 
 
+//Set y Get
+
+int ll_setFirstNode(LinkedList* this, Node* pNode);
+int ll_setNextNode(Node* this, Node* nextNode);
+int ll_set_NodeElement(Node* this, void* pElement);
+int ll_set_Size(LinkedList* this, int size);
+Node* ll_get_firstNode(LinkedList* this);
+Node* ll_get_LastNode(LinkedList* this);
+Node* ll_get_NextNode(Node* this);
+Node* ll_get_NodeElement(Node* this);
+Node* ll_get_Size(LinkedList* this);
+
+
+//extras
+int ll_increase_size(LinkedList* this);
+int ll_decrease_size(LinkedList* this);
+
+
 
 //Publicas
 LinkedList* ll_newLinkedList(void);
