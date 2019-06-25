@@ -27,9 +27,9 @@
 int main(void)
 {
 
-    startTesting(1);  // ll_newLinkedList
+    //startTesting(1);  // ll_newLinkedList
 
-    startTesting(2);  // ll_len
+    //startTesting(2);  // ll_len
 
     //startTesting(3);  // getNode - test_getNode
 
@@ -38,7 +38,7 @@ int main(void)
     //startTesting(5);  // ll_add
     /*
             startTesting(6);  // ll_get
-           startTesting(7);  // ll_set
+            startTesting(7);  // ll_set
             startTesting(8);  // ll_remove
             startTesting(9);  // ll_clear
             startTesting(10); // ll_deleteLinkedList

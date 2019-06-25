@@ -8,193 +8,6 @@ static Node* getNode(LinkedList* this, int nodeIndex);
 static int addNode(LinkedList* this, int nodeIndex,void* pElement);
 
 
-
-/** \brief Incrementa en 1 el size de la lista
- *
- * \param this LinkedList* Lista
- * \return int -1 si el puntero es NULL, 0 si pudo hacerlo.
- *
- */
-int ll_increase_size(LinkedList* this)
-{
-    int retVal = -1;
-    if (this!=NULL)
-    {
-        this->size +=1;
-        retVal = 0;
-    }
-    return retVal;
-}
-/** \brief Decrementa el size de la lista
- *
- * \param this LinkedList* Lista
- * \return int -1 si el puntero es NULL, 0 si pudo hacerlo.
- *
- */
-int ll_decrease_size(LinkedList* this)
-{
-    int retVal = -1;
-    if (this!=NULL)
-    {
-        this->size--;
-        retVal = 0;
-    }
-    return retVal;
-}
-
-/** \brief
- *
- * \param this LinkedList*
- * \param pNode Node*
- * \return int
- *
- */
-int ll_setFirstNode(LinkedList* this, Node* pNode)
-{
-    int retorno = -1;
-
-    if(this !=NULL && pNode != NULL)
-    {
-        this->pFirstNode = pNode;
-        retorno = 0;
-    }
-    return retorno;
-}
-
-/** \brief
- *
- * \param this LinkedList*
- * \param pNode Node*
- * \return int
- *
- */
-int ll_setNextNode(Node* this, Node* nextNode)
-{
-    int retorno = -1;
-
-    if(this !=NULL && nextNode != NULL)
-    {
-        this->pNextNode = nextNode;
-        retorno = 0;
-    }
-    return retorno;
-}
-
-/** \brief
- *
- * \param this Node*
- * \param pElement void*
- * \return int
- *
- */
-int ll_set_NodeElement(Node* this, void* pElement)
-{
-    int retorno = -1;
-    if (this!=NULL)
-    {
-        this->pElement = pElement;
-        retorno = 0;
-    }
-    return retorno;
-}
-
-int ll_set_Size(LinkedList* this, int size)
-{
-    int retorno = -1;
-    if (this!=NULL)
-    {
-        this->size = size;
-        retorno = 0;
-    }
-    return retorno;
-}
-
-
-
-/** \brief
- *
- * \param this LinkedList*
- * \return Node*
- *
- */
-Node* ll_get_firstNode(LinkedList* this)
-{
-    Node* retornoNode = NULL;
-    if (this!=NULL)
-    {
-        retornoNode = this->pFirstNode;
-    }
-    return retornoNode;
-
-}
-
-/** \brief
- *
- * \param this LinkedList*
- * \return Node*
- *
- */
-Node* ll_get_LastNode(LinkedList* this)
-{
-
-    Node* retornoNode = NULL;
-    if (this!=NULL)
-    {
-        if (ll_isEmpty(this)==0)
-        {
-            Node* lastNode = ll_get_firstNode(this);
-            while (lastNode!=NULL)
-            {
-                retornoNode = lastNode;
-                lastNode = ll_get_NextNode(retornoNode);
-            }
-        }
-    }
-    return retornoNode;
-}
-
-/** \brief
- *
- * \param this Node*
- * \return Node*
- *
- */
-Node* ll_get_NextNode(Node* this)
-{
-    Node* retornoNode = NULL;
-    if (this!=NULL)
-    {
-        retornoNode = this->pNextNode;
-    }
-    return retornoNode;
-
-
-}
-
-Node* ll_get_NodeElement(Node* this)
-{
-   void* ret = NULL;
-    if (this!=NULL)
-    {
-        ret = this->pElement;
-    }
-    return ret;
-
-
-}
-
-Node* ll_get_Size(LinkedList* this)
-{
-    void* retorno = NULL;
-    if (this!=NULL)
-    {
-        retorno = this->size;
-    }
-    return retorno;
-
-}
-
-
 /** \brief Crea un nuevo LinkedList en memoria de manera dinamica
  *
  *  \param void
@@ -208,7 +21,7 @@ LinkedList* ll_newLinkedList(void)
     if(this != NULL)
     {
         ll_set_Size(this, 0);
-       // this->size=0;
+        // this->size=0;
         ll_setFirstNode(this, NULL);
         //this->pFirstNode = NULL;
     }
@@ -248,7 +61,7 @@ static Node* getNode(LinkedList* this, int nodeIndex)
         return NULL;
     }
 
-    Node *pNode = this->pFirstNode;
+    Node *pNode = ll_get_firstNode(this);
     int actualIndex = 0;
 
     while(pNode != NULL)
@@ -259,8 +72,7 @@ static Node* getNode(LinkedList* this, int nodeIndex)
         }
 
         actualIndex++;
-
-        pNode = pNode->pNextNode;
+        pNode = ll_get_NextNode(pNode);
 
     }
 
@@ -292,29 +104,35 @@ Node* test_getNode(LinkedList* this, int nodeIndex)
  *
  */
 static int addNode(LinkedList* this, int nodeIndex,void* pElement)
-{/*
-    Node* pNewNode;
+{
 
-    if(this == NULL || nodeIndex < 0 || nodeIndex >=ll_len(this))
+    if(this == NULL || nodeIndex > ll_len(this) || nodeIndex < 0)
     {
         return -1;
     }
 
-    pNewNode = (Node*)malloc(sizeof(Node));
-    if(pNewNode != NULL)
+    if(nodeIndex == 0)
     {
-        ll_set
-        pNewNode->pElement = pElement;
-        ll_setNextNode(pNewNode, NULL);
-        //pNewNode->pNextNode = NULL;
-        if(nodeIndex == 0)
-        {
-            pNewNode->pNextNode = this->pFirstNode;
-            this->pFirstNode = pNewNode;
-        }
+        Node *newNode = (Node*)malloc(sizeof(Node));
+        Node *auxChildren = ll_get_firstNode(this);
+        ll_set_NodeElement(newNode, pElement);
+        ll_setNextNode(newNode, auxChildren);
+        ll_setFirstNode(this,newNode);
+    }
+    else
+    {
+        Node *newNode = (Node*)malloc(sizeof(Node));
+        Node *parent = getNode(this, nodeIndex - 1);
 
+        Node *auxNextNode = ll_get_NextNode(parent);
 
-    }*/
+        ll_set_NodeElement(newNode, pElement);
+        ll_setNextNode(parent, newNode);
+        ll_setNextNode(newNode, auxNextNode);
+    }
+
+    ll_increase_size(this);
+
     return 0;
 
 }
@@ -345,12 +163,6 @@ int test_addNode(LinkedList* this, int nodeIndex,void* pElement)
  */
 int ll_add(LinkedList* this, void* pElement)
 {
-
-    if(this == NULL)
-    {
-        return -1;
-    }
-
 
 
     return 0;
@@ -589,3 +401,188 @@ int ll_sort(LinkedList* this, int (*pFunc)(void*,void*), int order)
 
 }
 
+
+/** \brief Incrementa en 1 el size de la lista
+ *
+ * \param this LinkedList* Lista
+ * \return int -1 si el puntero es NULL, 0 si pudo hacerlo.
+ *
+ */
+int ll_increase_size(LinkedList* this)
+{
+    int retVal = -1;
+    if (this!=NULL)
+    {
+        this->size +=1;
+        retVal = 0;
+    }
+    return retVal;
+}
+/** \brief Decrementa el size de la lista
+ *
+ * \param this LinkedList* Lista
+ * \return int -1 si el puntero es NULL, 0 si pudo hacerlo.
+ *
+ */
+int ll_decrease_size(LinkedList* this)
+{
+    int retVal = -1;
+    if (this!=NULL)
+    {
+        this->size--;
+        retVal = 0;
+    }
+    return retVal;
+}
+
+/** \brief
+ *
+ * \param this LinkedList*
+ * \param pNode Node*
+ * \return int
+ *
+ */
+int ll_setFirstNode(LinkedList* this, Node* pNode)
+{
+    int retorno = -1;
+
+    if(this !=NULL && pNode != NULL)
+    {
+        this->pFirstNode = pNode;
+        retorno = 0;
+    }
+    return retorno;
+}
+
+/** \brief
+ *
+ * \param this LinkedList*
+ * \param pNode Node*
+ * \return int
+ *
+ */
+int ll_setNextNode(Node* this, Node* nextNode)
+{
+    int retorno = -1;
+
+    if(this !=NULL && nextNode != NULL)
+    {
+        this->pNextNode = nextNode;
+        retorno = 0;
+    }
+    return retorno;
+}
+
+/** \brief
+ *
+ * \param this Node*
+ * \param pElement void*
+ * \return int
+ *
+ */
+int ll_set_NodeElement(Node* this, void* pElement)
+{
+    int retorno = -1;
+    if (this!=NULL)
+    {
+        this->pElement = pElement;
+        retorno = 0;
+    }
+    return retorno;
+}
+
+int ll_set_Size(LinkedList* this, int size)
+{
+    int retorno = -1;
+
+    if (this!=NULL)
+    {
+        this->size = size;
+        retorno = 0;
+    }
+    return retorno;
+}
+
+
+
+/** \brief
+ *
+ * \param this LinkedList*
+ * \return Node*
+ *
+ */
+Node* ll_get_firstNode(LinkedList* this)
+{
+    Node* retornoNode = NULL;
+    if (this!=NULL)
+    {
+        retornoNode = this->pFirstNode;
+    }
+    return retornoNode;
+
+}
+
+/** \brief
+ *
+ * \param this LinkedList*
+ * \return Node*
+ *
+ */
+Node* ll_get_LastNode(LinkedList* this)
+{
+
+    Node* retornoNode = NULL;
+    if (this!=NULL)
+    {
+        if (ll_isEmpty(this)==0)
+        {
+            Node* lastNode = ll_get_firstNode(this);
+            while (lastNode!=NULL)
+            {
+                retornoNode = lastNode;
+                lastNode = ll_get_NextNode(retornoNode);
+            }
+        }
+    }
+    return retornoNode;
+}
+
+/** \brief
+ *
+ * \param this Node*
+ * \return Node*
+ *
+ */
+Node* ll_get_NextNode(Node* this)
+{
+    Node* retornoNode = NULL;
+    if (this!=NULL)
+    {
+        retornoNode = this->pNextNode;
+    }
+    return retornoNode;
+
+
+}
+
+Node* ll_get_NodeElement(Node* this)
+{
+    void* ret = NULL;
+    if (this!=NULL)
+    {
+        ret = this->pElement;
+    }
+    return ret;
+
+
+}
+
+int ll_get_Size(LinkedList* this)
+{
+    int retorno = 0;
+    if (this!=NULL)
+    {
+        retorno = this->size;
+    }
+    return retorno;
+}
