@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1567814026 source:e:\usuarios\escritorio\utn1cuatri\practicas\calcui\main.c
+	<stdio.h>
+	<stdlib.h>
+	"op.h"
+
+1567814009 e:\usuarios\escritorio\utn1cuatri\practicas\calcui\op.h
+
